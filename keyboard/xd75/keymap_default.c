@@ -32,42 +32,42 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 #endif
     /* Keymap 0: Default Layer
      * ,-----------------------------------------------------------.
-     * |Esc|  1|  2|  3|  4|  5|  -|  ~|  =|  6|  7|  8|  9|  0| Bs|
+     * |Esc|  1|  2|  3|  4|  5|  -|  =|  \|  6|  7|  8|  9|  0| Bs|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |Tab|  Q|  W|  E|  R|  T|  [|  \|  ]|  Y|  U|  I|  O|  P|  '|
+     * |Tab|  Q|  W|  E|  R|  T|  [|  ]|  /|  Y|  U|  I|  O|  P|Del|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |Cap|  A|  S|  D|  F|  G|Hom|Del|PgU|  H|  J|  K|  L|  ;|Ret|
+     * |  ~|  A|  S|  D|  F|  G|Ins|Hom|PgU|  H|  J|  K|  L|  ;|Ret|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |Shi|  Z|  X|  C|  V|  B|End| Up|PgD|  N|  M|  ,|  .|  /|Shi|
+     * |  '|  Z|  X|  C|  V|  B|Del|Ene|PgD|  N|  M|  ,|  .| Up|   |
      * |---+---+---+---+-------+---+---+---+-------+---+---+---+---|
-     * |Ctr|Gui|Alt|Fn0| Space |Lef|Dow|Rig| Space |Fn1|Alt|Gui|Ctr|
+     * |Ctr|Fn0|Gui|Alt| Shift |LMB|   |RMB| Space |   |Lef|Dow|Rig|
      * `-----------------------------------------------------------'
      */
     KEYMAP(
-        ESC, 1,   2,   3,   4,   5,   MINS,GRV, EQL, 6,   7,   8,   9,   0,   BSPC, \
-        TAB, Q,   W,   E,   R,   T,   LBRC,BSLS,RBRC,Y,   U,   I,   O,   P,   QUOT, \
-        CAPS,A,   S,   D,   F,   G,   HOME,DEL, PGUP,H,   J,   K,   L,   SCLN,ENT,  \
-        LSFT,Z,   X,   C,   V,   B,   END, UP,  PGDN,N,   M,   COMM,DOT, SLSH,RSFT, \
-        LCTL,LGUI,LALT,FN0, SPC, SPC, LEFT,DOWN,RGHT,SPC, SPC, FN1, RALT,RGUI,RCTL),
+        ESC ,   1,   2,   3,   4,   5,MINS, EQL,BSLS,   6,   7,   8,   9,   0,BSPC, \
+        TAB ,   Q,   W,   E,   R,   T,LBRC,BSLS,SLSH,   Y,   U,   I,   O,   P, DEL, \
+        GRV ,   A,   S,   D,   F,   G, INS,HOME,PGUP,   H,   J,   K,   L,SCLN, ENT, \
+        QUOT,   Z,   X,   C,   V,   B, DEL, END,PGDN,   N,   M,COMM, DOT,  UP,TRNS, \
+        LCTL, FN0,LGUI,LALT,TRNS,LSFT,TRNS,TRNS,TRNS, SPC,TRNS,TRNS,LEFT,DOWN,RGHT),
     /* Keymap 1: Fn Layer
      * ,-----------------------------------------------------------.
-     * | F1| F2| F3| F4| F5| F6|Num|  /|  *| F7| F8| F9|F10|F11|F12|
+     * | F1| F2| F3| F4| F5| F6|Mut|VoD|VoU|ScL| Bs|  ^|  (|  )|  /|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |MSe|Cal|MCo|Mai|   |   |  7|  8|  9|  -|   |   |PrS|ScL|Pau|
+     * | F7| F8| F9|F10|F11|F12|Pla|Pre|Nex|PrS|Del|  7|  8|  9|  *|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |Pre|Pla|Nex|Sto|   |   |  4|  5|  6|  +|   |BoL|   |   |   |
+     * |F13|F14|F15|Fn2|Fn3|Fn4|Ins|Hom|PgU|Pau|Tab|  4|  5|  6|  +|
      * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |VoD|Mut|VoU|App|   |   |  1|  2|  3|Ent|   |   |   |Fn8|Fn5|
+     * |F16|Fn5|Fn6|Fn7|Fn8|Fn9|Del|Ene|PgD|  %|  $|  1|  2|  3|  -|
      * |---+---+---+---+-------+---+---+---+-------+---+---+---+---|
-     * |Fn3|Fn2|Fn4|   |       |  0| 00|  .| Enter |   |Fn6|Fn9|Fn7|
+     * |Ctr|Fn0|Gui|Alt| Shift |LMB|   |RMB| Space |  0|  ,|  .|Ent|
      * `-----------------------------------------------------------'
      */
     KEYMAP(
-        F1,  F2,  F3,  F4,  F5,  F6,  NLCK,PSLS,PAST,F7,  F8,  F9,  F10, F11, F12,  \
-        MSEL,CALC,MYCM,MAIL,TRNS,TRNS,P7,  P8,  P9,  PMNS,TRNS,TRNS,PSCR,SLCK,PAUS, \
-        MPRV,MPLY,MNXT,MSTP,TRNS,TRNS,P4,  P5,  P6,  PPLS,TRNS,BTLD,TRNS,TRNS,TRNS, \
-        VOLD,MUTE,VOLU,APP, TRNS,TRNS,P1,  P2,  P3,  PENT,TRNS,TRNS,TRNS,FN9, FN5,  \
-        FN3, FN2, FN4, TRNS,TRNS,TRNS,P0,  FN10,PDOT,PENT,PENT,FN11,FN6, FN8, FN7),
+          F1,  F2,  F3,  F4,  F5,  F6,MUTE,VOLD,VOLU,,,,,,, \
+          F7,  F8,  F9, F10, F11, F12,MPLY,MPRV,MNXT,,,,,,, \
+         F13, F14, F15, Fn2, Fn3, Fn4, INS,HOME,PGUP,,,,,,, \
+         F16, Fn5, Fn6, Fn7, Fn8, Fn9, DEL, END,PGDN,,,,,,, \
+        LCTL, FN0,LGUI,LALT,TRNS,LSFT,TRNS,TRNS,TRNS, SPC,TRNS,,,,),
     /* Keymap 2: Fn Layer
      * ,-----------------------------------------------------------.
      * | F1| F2| F3| F4| F5| F6|Num|  /|  *| F7| F8| F9|F10|F11|F12|
@@ -87,25 +87,6 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
         MPRV,MPLY,MNXT,MSTP,TRNS,TRNS,P4,  P5,  P6,  PPLS,TRNS,BTLD,TRNS,TRNS,TRNS, \
         VOLD,MUTE,VOLU,APP, TRNS,TRNS,P1,  P2,  P3,  PENT,TRNS,TRNS,TRNS,FN9, FN5,  \
         FN3, FN2, FN4, FN11,TRNS,TRNS,P0,  FN10,PDOT,PENT,PENT,TRNS,FN6, FN8, FN7),
-    /* Keymap 3: Fn Layer
-     * ,-----------------------------------------------------------.
-     * | F1| F2| F3| F4| F5| F6|Num|  /|  *| F7| F8| F9|F10|F11|F12|
-     * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |MSe|Cal|MCo|Mai|   |   |  7|  8|  9|  -|   |   |PrS|ScL|Pau|
-     * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |Pre|Pla|Nex|Sto|   |   |  4|  5|  6|  +|   |BoL|   |   |   |
-     * |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
-     * |VoD|Mut|VoU|App|   |   |  1|  2|  3|Ent|   |   |   |Fn8|Fn5|
-     * |---+---+---+---+-------+---+---+---+-------+---+---+---+---|
-     * |Fn3|Fn2|Fn4|   |       |  0| 00|  .| Enter |   |Fn6|Fn9|Fn7|
-     * `-----------------------------------------------------------'
-     */
-    KEYMAP(
-        F1,  F2,  F3,  F4,  F5,  F6,  NLCK,PSLS,PAST,F7,  F8,  F9,  F10, F11, F12,  \
-        MSEL,CALC,MYCM,MAIL,TRNS,TRNS,P7,  P8,  P9,  PMNS,TRNS,TRNS,PSCR,SLCK,PAUS, \
-        MPRV,MPLY,MNXT,MSTP,TRNS,TRNS,P4,  P5,  P6,  PPLS,TRNS,BTLD,TRNS,TRNS,TRNS, \
-        VOLD,MUTE,VOLU,APP, TRNS,TRNS,P1,  P2,  P3,  PENT,TRNS,TRNS,TRNS,FN9, FN5,  \
-        FN3, FN2, FN4, TRNS,TRNS,TRNS,P0,  FN10,PDOT,PENT,PENT,TRNS,FN6, FN8, FN7),
 };
 
 enum function_id {
